@@ -4,7 +4,7 @@ public class CharacterA extends Duel implements Dueler{
 	private String name;
 	private int HP;
 	public CharacterA() {
-		 name = "vic";
+		 name = "Vic";
 	}
 	public String getName() {
 		return name;
