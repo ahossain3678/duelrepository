@@ -1,17 +1,17 @@
 package duel;
 
-<<<<<<< Upstream, based on 1ee76262e2dea31d4832c7f41c23805b28c8380b
 public class CharacterA implements Dueler{
-=======
-public class CharacterA implements Dueler {
->>>>>>> da296af CharacterA update
 	private String name;
 	private int HP;
 	public CharacterA() {
 		name = "Riley Sins";
 	}
 	public void taunt() {
-		
+		if(Math.random() <= .5){
+			System.out.println("Come at me amigo");
+		}else{
+			System.out.println("You're gonna git it now");
+		}
 	}
 	public String getName() {
 		return name;
@@ -24,13 +24,13 @@ public class CharacterA implements Dueler {
 	}
 	public boolean determineOpponentIsFair(Dueler d, int hp){
 		if(d.getHP() == hp){
-		return true;
+			return true;
 		}else{
 			return false;
 		}
 	}
 	public int getAction(Object caller) {
-		
+		return caller;
 	}
 	public void hit(Object caller) {
 		HP -= 10;
