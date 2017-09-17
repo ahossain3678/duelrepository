@@ -1,6 +1,6 @@
 package duel;
 
-public class CharacterA extends Duel implements Dueler{
+public class CharacterA implements Dueler{
 	private String name;
 	private int HP;
 	public CharacterA() {
