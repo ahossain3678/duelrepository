@@ -33,6 +33,6 @@ public class CharacterA implements Dueler{
 		return caller;
 	}
 	public void hit(Object caller) {
-		HP -= 10;
+		caller.setStartingHP(getHP() - 10);
 	}
 }
