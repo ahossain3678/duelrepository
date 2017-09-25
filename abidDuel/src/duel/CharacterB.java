@@ -16,7 +16,7 @@ public class CharacterB implements Dueler
     public CharacterB()
     {
         name = "Johnny Reid";
-    }
+    } 
     public void taunt()
     {
         if(Math.random() > .5)

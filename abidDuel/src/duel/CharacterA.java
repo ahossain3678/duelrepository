@@ -3,8 +3,11 @@ package duel;
 public class CharacterA implements Dueler{
 	private String name;
 	private int HP;
+	private boolean loaded;
+	
 	public CharacterA() {
 		name = "Riley Sins";
+		loaded = false;
 	}
 	public void taunt() {
 		if(Math.random() <= .5){
