@@ -22,7 +22,7 @@ public class CharacterA implements Dueler{
 	public int getHP() {
 		return HP;
 	}
-	public boolean determineOpponentIsFair(Dueler d, int hp){
+	public boolean determineIfOpponentIsFair(Dueler d, int hp){
 		if(d.getHP() == hp){
 			return true;
 		}else{
@@ -30,9 +30,13 @@ public class CharacterA implements Dueler{
 		}
 	}
 	public int getAction(Object caller) {
-		return caller;
+		if(Math.random() <= .5){
+			return 0;
+		}else{
+			return 1;
+		}
 	}
 	public void hit(Object caller) {
-		caller.setStartingHP(getHP() - 10);
+		HP -= 10;
 	}
 }

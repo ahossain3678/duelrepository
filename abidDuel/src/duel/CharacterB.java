@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dueler;
+package duel;
 
 /**
  *
@@ -17,15 +17,15 @@ public class CharacterB implements Dueler
     {
         name = "Johnny Reid";
     }
-    public void Taunt()
+    public void taunt()
     {
         if(Math.random() > .5)
         {
-            System.out.println("");
+            System.out.println("Jesus Christ");
         }
         else
         {
-            System.out.println("");
+            System.out.println("Banzai");
         }
     }
     public String getName()
@@ -59,11 +59,11 @@ public class CharacterB implements Dueler
      */
     public int getAction(Object caller)
     {
-        
+        return 1;
     }
     public void hit(Object caller)
     {
-        caller.setStartingHP(getHP()-10);
+        HP -= 10;
     }
 }
    
