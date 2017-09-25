@@ -24,7 +24,7 @@ public class CharacterB implements Dueler
             System.out.println("Jesus Christ");
         }
         else
-        {
+        { 
             System.out.println("Banzai");
         }
     }

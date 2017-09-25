@@ -12,7 +12,7 @@ public class CharacterA implements Dueler{
 		}else{
 			System.out.println("You're gonna git it now");
 		}
-	}
+	} 
 	public String getName() {
 		return name;
 	}
