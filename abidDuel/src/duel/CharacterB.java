@@ -95,7 +95,7 @@ public class CharacterB implements Dueler
         {
         	return Duel.YEAH_RIGHT;
         }
-		
+		return 4;
     }
     public void hit(Object caller)
     {
