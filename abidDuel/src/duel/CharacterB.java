@@ -13,15 +13,17 @@ public class CharacterB implements Dueler
 {
     private int HP;
     private String name;
+    private boolean loaded;
     public CharacterB()
     {
         name = "Johnny Reid";
+        loaded = false;
     } 
     public void taunt()
     {
         if(Math.random() > .5)
         {
-            System.out.println("Jesus Christ");
+            System.out.println("we");
         }
         else
         { 
@@ -59,7 +61,41 @@ public class CharacterB implements Dueler
      */
     public int getAction(Object caller)
     {
-        return 1;
+        if(caller instanceof Duel) 
+        {
+        	if(loaded == false)
+        	{	
+        		loaded = true;
+        		return Duel.LOADING;	
+        	}
+        	else
+        	{
+        		if(HP > 70)
+        		{
+        			loaded = false;
+        			return Duel.SHOOTING;
+        		}
+        		else if(HP < 70 && HP > 50)
+        		{
+        			return Duel.GUARDING;
+        		}
+        		if(HP <= 50)
+        		{
+        			loaded = false;
+        			return Duel.SHOOTING;
+        		}
+        		if(HP <= 10)
+        		{
+        			System.out.println("AAAAAAHH");
+        			return Duel.GUARDING;
+        		}
+        	}
+        }
+        else
+        {
+        	return Duel.YEAH_RIGHT;
+        }
+		
     }
     public void hit(Object caller)
     {
