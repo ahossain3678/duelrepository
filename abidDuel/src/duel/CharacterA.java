@@ -84,7 +84,7 @@ public class CharacterA implements Dueler{
 				}
 			}
 		}
-		return 3;
+		return 2;
 	}
 	public void hit(Object caller) {
 		HP -= 10;

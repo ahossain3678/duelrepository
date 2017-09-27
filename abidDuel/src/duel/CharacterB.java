@@ -77,6 +77,7 @@ public class CharacterB implements Dueler
         		}
         		else if(HP < 70 && HP > 50)
         		{
+        			loaded = false;
         			return Duel.GUARDING;
         		}
         		if(HP <= 50)
@@ -86,6 +87,7 @@ public class CharacterB implements Dueler
         		}
         		if(HP <= 10)
         		{
+        			loaded = false;
         			System.out.println("AAAAAAHH");
         			return Duel.GUARDING;
         		}
@@ -93,9 +95,9 @@ public class CharacterB implements Dueler
         }
         else
         {
-        	return Duel.YEAH_RIGHT;
+        	return Duel.GUARDING;
         }
-		return 4;
+		return Duel.GUARDING;
     }
     public void hit(Object caller)
     {
